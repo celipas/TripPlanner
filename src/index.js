@@ -3,7 +3,8 @@ const buildMarker = require("./marker.js")
 // var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiY2VsaXBhcyIsImEiOiJjam1pNTJ2dmkwMWNxM2ttNDk4NzZub25uIn0.M8vRYfUJXZ_nIdWYlbaV_A';
-debugger;
+
+const fullstackCoords = [-74.009, 40.705]
 const map = new mapboxgl.Map({
   container: "map",
   center: [-74.009, 40.705], // FullStack NY coordinates; alternatively, use [-87.6354, 41.8885] for Chicago
@@ -11,7 +12,7 @@ const map = new mapboxgl.Map({
   style: "mapbox://styles/mapbox/streets-v10" // mapbox has lots of different map styles available.
 });
 
-const marker1 = buildMarker('hotel', [-74.009151, 40.705086]) //.addTo(map)
+const marker1 = buildMarker('hotel', fullstackCoords) //.addTo(map)
 marker1.addTo(map)
 // debugger;
 //const newDomElement1 = document.createElement("div")
